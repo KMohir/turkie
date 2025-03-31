@@ -1,0 +1,236 @@
+# Russian translation for Turkiston Akademiyasi
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-30 12:00+0500\n"
+"PO-Revision-Date: 2025-03-30 12:00+0500\n"
+"Last-Translator: Grok <grok@xai.com>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Turkiston Akademiyasi"
+msgstr "Туркистонская Академия"
+
+msgid "Turkiya va O'zbekiston hamkorligi"
+msgstr "Сотрудничество Турции и Узбекистана"
+
+msgid "Bosh sahifa"
+msgstr "Главная страница"
+
+msgid "Yangiliklar"
+msgstr "Новости"
+
+msgid "Biz haqimizda"
+msgstr "О нас"
+
+msgid "Missiyamiz"
+msgstr "Наша миссия"
+
+msgid "Ta'lim yo'nalishlari"
+msgstr "Направления обучения"
+
+msgid "Hamkorlar"
+msgstr "Партнеры"
+
+msgid "Kontakt"
+msgstr "Контакты"
+
+msgid "2025-yilda Toshkent shahrida tashkil etilgan 'Turkiston Akademiyasi' - Turkiya va O'zbekiston o'rtasida ta'lim va sertifikatlash sohasidagi hamkorlikni yangi bosqichga ko'taruvchi nufuzli bilim markazi."
+msgstr "Основанная в 2025 году в Ташкенте 'Туркистонская Академия' - это престижный образовательный центр, поднимающий сотрудничество между Турцией и Узбекистаном в сфере образования и сертификации на новый уровень."
+
+msgid "Dasturlar haqida"
+msgstr "О программах"
+
+msgid "Turkiston Akademiyasi'ning so'nggi yangiliklari va e'lonlarini ushbu sahifada kuzatib boring. Akademiyamiz muntazam ravishda o'quv dasturlari, tadbirlar va ilmiy loyihalar haqida ma'lumotlar yangilab boradi."
+msgstr "Следите за последними новостями и объявлениями Туркистонской Академии на этой странице. Наша академия регулярно обновляет информацию о учебных программах, мероприятиях и научных проектах."
+
+msgid "So'nggi e'lonlar"
+msgstr "Последние объявления"
+
+msgid "Akademiyamizning so'nggi o'quv dasturlari va qabul jarayoni haqida muhim ma'lumotlar"
+msgstr "Важная информация о последних учебных программах и процессе приема в нашу академию"
+
+msgid "Kelgusi tadbirlar"
+msgstr "Предстоящие мероприятия"
+
+msgid "Yaqin orada o'tkaziladigan seminarlar, master-klasslar va konferensiyalar taqvim"
+msgstr "Календарь предстоящих семинаров, мастер-классов и конференций"
+
+msgid "Muvaffaqiyat tarixi"
+msgstr "История успеха"
+
+msgid "Akademiyamiz bitiruvchilarining yutuqlari va kasbiy o'sish tajribalari"
+msgstr "Достижения наших выпускников и их опыт профессионального роста"
+
+msgid "Tashkil etilishi"
+msgstr "Основание"
+
+msgid "2025-yilda Toshkent shahrida ikki davlat hamkorligida innovatsion ta'lim markazi sifatida tashkil topgan"
+msgstr "Основан в 2025 году в Ташкенте как инновационный образовательный центр в рамках сотрудничества двух государств"
+
+msgid "Sertifikatlash markazi"
+msgstr "Центр сертификации"
+
+msgid "Ta'lim va kasbiy sohalarda xalqaro e'tirof etilgan sertifikatlarni berish bo'yicha litsenziyalangan muassasa"
+msgstr "Лицензированное учреждение, выдающее международно признанные сертификаты в области образования и профессиональных навыков"
+
+msgid "Hamkorlik"
+msgstr "Сотрудничество"
+
+msgid "Turkiston Akademiyasi ikki mamlakatning yetakchi universitet va kompaniyalari bilan o'zaro aloqalar o'rnatgan markaz"
+msgstr "Туркистонская Академия - центр, установивший взаимосвязи с ведущими университетами и компаниями двух стран"
+
+msgid "Mutaxassislar jamoasi"
+msgstr "Команда специалистов"
+
+msgid "Turkiya va O'zbekistonning tajribali professor-o'qituvchilari va amaliyotchilari ekspertlar iborat jamoasi"
+msgstr "Команда экспертов, состоящая из опытных профессоров-преподавателей и практиков из Турции и Узбекистана"
+
+msgid "Turkiston Akademiyasi ikkala mamlakat manfaatlarini ko'zlab, ta'lim va kasbiy taraqqiyot sohasida yangi imkoniyatlar yaratishga intiladi."
+msgstr "Туркистонская Академия стремится создавать новые возможности в сфере образования и профессионального развития, учитывая интересы обеих стран."
+
+msgid "Missiyamiz va maqsadlarimiz"
+msgstr "Наша миссия и цели"
+
+msgid "Oliy maqsad"
+msgstr "Высшая цель"
+
+msgid "Ta'lim sifatini oshirish, iqtisodiy hamkorlikni kuchaytirish"
+msgstr "Повышение качества образования, укрепление экономического сотрудничества"
+
+msgid "Malaka oshirish"
+msgstr "Повышение квалификации"
+
+msgid "Mutaxassislar almashinuvini va kasbiy ko'nikmalarni rivojlantirish"
+msgstr "Обмен специалистами и развитие профессиональных навыков"
+
+msgid "Ilmiy hamkorlik"
+msgstr "Научное сотрудничество"
+
+msgid "Loyihalarda birgalikda ishlash va innovatsion loyihalarni amalga oshirish"
+msgstr "Совместная работа над проектами и реализация инновационных проектов"
+
+msgid "Xalqaro sertifikatlash"
+msgstr "Международная сертификация"
+
+msgid "Xalqaro standartlarga mos sertifikatlarni berish va yo'ga qo'yish"
+msgstr "Выдача и внедрение сертификатов, соответствующих международным стандартам"
+
+msgid "Biznes boshqaruvi"
+msgstr "Управление бизнесом"
+
+msgid "Xalqaro savdo, moliya va marketing sohasida zamonaviy yondashuvlar va amaliy ko'nikmalar beruvchi dasturlar."
+msgstr "Программы, предоставляющие современные подходы и практические навыки в области международной торговли, финансов и маркетинга."
+
+msgid "Axborot texnologiyalari"
+msgstr "Информационные технологии"
+
+msgid "Dasturlash, ma'lumotlar tahlili va sun'iy intellekt bo'yicha chuqurlashtirilgan o'quv kurslari."
+msgstr "Углубленные курсы по программированию, анализу данных и искусственному интеллекту."
+
+msgid "Til va madiynat"
+msgstr "Язык и культура"
+
+msgid "Turk va o'zbek tillari, madiynati, tarixi o'rganish hamda tarjimolik ko'nikmalarini rivojlantirish."
+msgstr "Изучение турецкого и узбекского языков, культуры, истории, а также развитие навыков перевода."
+
+msgid "Pedagogika va ta'lim metodikasi"
+msgstr "Педагогика и методика обучения"
+
+msgid "Zamonaviy ta'lim usullari, masofaviy ta'lim texnologiyalari va o'qitish mahoratini oshirish."
+msgstr "Современные методы обучения, технологии дистанционного обучения и повышение педагогического мастерства."
+
+msgid "Bizning hamkorlarimiz xalqaro moliyaviy qo'llab-quvvatlashni, balki o'quv dasturlarini ishlab chiqishda maslahat va ko'mak berib kelishmoqda."
+msgstr "Наши партнеры оказывают международную финансовую поддержку, а также консультируют и помогают в разработке учебных программ."
+
+msgid "Turkiston Akademiyasi ta'lim va ilmiy-tadqiqot sohasida yuqori natijalarga erishish uchun nufuzli tashkilotlar bilan strategik hamkorlik aloqalarini o'rnatgan."
+msgstr "Туркистонская Академия установила стратегическое сотрудничество с престижными организациями для достижения высоких результатов в сфере образования и научных исследований."
+
+msgid "Ta'lim muassasalari"
+msgstr "Образовательные учреждения"
+
+msgid "Turkiya va O'zbekistonning yetakchi universitetlari, akademik institutlar bilan o'zaro hamkorlik shartnomalari o'rnatgan bo'lib, talabalarga o'quv dasturlarini amalga oshirish va ilmiy loyihalarda oshirishmoqda."
+msgstr "Заключены соглашения о сотрудничестве с ведущими университетами и академическими институтами Турции и Узбекистана, что позволяет студентам реализовывать учебные программы и участвовать в научных проектах."
+
+msgid "Davlat tashkilotlari"
+msgstr "Государственные организации"
+
+msgid "Ikkala mamlakat vazirliklari va idoralari bilan hamkorlikda mutaxassislarini tayyorlash, malaka oshirish va sertifikatlash dasturlarni ishlab chiqish loyihalarni amalga oshirilmoqda."
+msgstr "В сотрудничестве с министерствами и ведомствами обеих стран реализуются проекты по подготовке специалистов, повышению квалификации и разработке программ сертификации."
+
+msgid "Xususiy sektor"
+msgstr "Частный сектор"
+
+msgid "Xalqaro va mahalliy kompaniyalar bilan hamkorlikda amaliy ko'nikmalarni rivojlantirish, stajirovka dasturlarini tashkil etish va bitiruvchilarini ish bilan ta'minlash mexanizmlari yaratilgan."
+msgstr "В сотрудничестве с международными и местными компаниями созданы механизмы развития практических навыков, организации стажировок и трудоустройства выпускников."
+
+msgid "Kontakt ma'lumotlari"
+msgstr "Контактная информация"
+
+msgid "Turkiston Akademiyasi bilan bog'lanish uchun quyidagi aloqa vositalaridan foydalanishingiz mumkin:"
+msgstr "Для связи с Туркистонской Академией вы можете использовать следующие контактные данные:"
+
+msgid "Manzil"
+msgstr "Адрес"
+
+msgid "Toshkent shahri, Yakkasaray Tumani, Kichik Beshyog'och ko'chasi, NO-87"
+msgstr "г. Ташкент, Яккасарайский район, ул. Киччик Бешагач, №87"
+
+msgid "Telefon raqamlari"
+msgstr "Номера телефонов"
+
+msgid "+998 91 775 63 33 (asosiy)"
+msgstr "+998 91 775 63 33 (основной)"
+
+msgid "+998 98 800 05 99 (mobil)"
+msgstr "+998 98 800 05 99 (мобильный)"
+
+msgid "Elektron pochta"
+msgstr "Электронная почта"
+
+msgid "info@turkistonacademy.uz"
+msgstr "info@turkistonacademy.uz"
+
+msgid "Ish vaqti"
+msgstr "Рабочее время"
+
+msgid "Dushanba - Juma: 9:00 - 18:00"
+msgstr "Понедельник - Пятница: 9:00 - 18:00"
+
+msgid "Shanba: 10:00 - 14:00"
+msgstr "Суббота: 10:00 - 14:00"
+
+msgid "Yakshanba: Dam olish kuni"
+msgstr "Воскресенье: Выходной"
+
+msgid "Savollar bo'lsa, bizga murojaat qilishdan tortinmang. Mutaxassislarimiz sizga yordam berishdan xursand bo'ladi."
+msgstr "Если у вас есть вопросы, не стесняйтесь обращаться к нам. Наши специалисты будут рады помочь вам."
+
+msgid "Bizga xabar qoldiring"
+msgstr "Оставьте нам сообщение"
+
+msgid "Yuborish"
+msgstr "Отправить"
+
+msgid "Sahifalar"
+msgstr "Страницы"
+
+msgid "Aloqa"
+msgstr "Связь"
+
+msgid "Kontaktlar"
+msgstr "Контакты"
+
+msgid "Ro'yxatdan o'tish"
+msgstr "Регистрация"
+
+msgid "Ko'p so'raladigan savollar"
+msgstr "Часто задаваемые вопросы"
+
+msgid "Turkiston akademiyasi. Barcha huquqlar himoyalangan."
+msgstr "Туркистонская академия. Все права защищены."

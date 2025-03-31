@@ -1,0 +1,52 @@
+{% extends 'academy/base.html' %}
+{% load static i18n news_filters %}
+
+{% block title %}{% trans "Yangiliklar" %} - {% trans "Turkiston Akademiyasi" %}{% endblock %}
+
+{% block content %}
+    <section id="yangiliklar" class="section">
+        <div class="container">
+            <h2 class="section-title">{% trans "Yangiliklar" %}</h2>
+            <p class="section-desc">{% trans "Turkiston Akademiyasi'ning so'nggi yangiliklari va e'lonlarini ushbu sahifada kuzatib boring. Akademiyamiz muntazam ravishda o'quv dasturlari, tadbirlar va ilmiy loyihalar haqida ma'lumotlar yangilab boradi." %}</p>
+            <div class="news-scroll-container">
+                <div class="news-scroll">
+                    {% for news in news_items %}
+                        <div class="news-card">
+                            <div class="news-date-label">
+                                {{ news.published_date|uzbek_date_format }}
+                            </div>
+                            {% if news.image %}
+                                <img src="{{ news.image.url }}" alt="{% if LANGUAGE_CODE == 'ru' %}{{ news.title_ru }}{% else %}{{ news.title_uz }}{% endif %}" class="news-image">
+                            {% else %}
+                                <img src="{% static 'images/default-news.jpg' %}" alt="Default News Image" class="news-image">
+                            {% endif %}
+                            <h3 class="news-title">
+                                <a href="{% url 'news_detail' news.slug %}">
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ news.title_ru }}
+                                    {% else %}
+                                        {{ news.title_uz }}
+                                    {% endif %}
+                                </a>
+                            </h3>
+                            <p class="news-description">
+                                {% if LANGUAGE_CODE == 'ru' %}
+                                    {{ news.short_description_ru }}
+                                {% else %}
+                                    {{ news.short_description_uz }}
+                                {% endif %}
+                            </p>
+                            <div class="news-meta">
+                                <span class="news-date">
+                                    <i class="fas fa-calendar-alt"></i> {{ news.published_date|date:"d.m.Y" }}
+                                </span>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <p>{% trans "Hozircha yangiliklar yo'q." %}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,236 @@
+{% extends 'academy/base.html' %}
+{% load static i18n %}
+{% load static i18n news_filters %}
+{% block title %}{% trans "Turkiston Akademiyasi" %}{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section id="main" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>{% trans "Turkiston Akademiyasi" %}</h1>
+                <h2>
+                    {% trans "Turkiya va O'zbekiston hamkorligi" %}
+                    <img src="{% static 'images/turkey-flag.png' %}" alt="{% trans 'Turkey Flag' %}" style="width: 48px; height: 32px; vertical-align: middle; margin-left: 5px;">
+                    <img src="{% static 'images/uzbekistan-flag.png' %}" alt="{% trans 'Uzbekistan Flag' %}" style="width: 48px; height: 32px; vertical-align: middle; margin-left: 5px;">
+                </h2>
+                <p>{% trans "2025-yilda Toshkent shahrida tashkil etilgan 'Turkiston Akademiyasi' - Turkiya va O'zbekiston o'rtasida ta'lim va sertifikatlash sohasidagi hamkorlikni yangi bosqichga ko'taruvchi nufuzli bilim markazi." %}</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn primary-btn">{% trans "Dasturlar haqida" %}</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{% static 'images/academy-building.jpg' %}" alt="{% trans 'Turkiston Akademiyasi Building' %}">
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="yangiliklar" class="section">
+        <div class="container">
+            <h2 class="section-title">{% trans "Yangiliklar" %}</h2>
+            <p class="section-desc">{% trans "Turkiston Akademiyasi'ning so'nggi yangiliklari va e'lonlarini ushbu sahifada kuzatib boring. Akademiyamiz muntazam ravishda o'quv dasturlari, tadbirlar va ilmiy loyihalar haqida ma'lumotlar yangilab boradi." %}</p>
+            <div class="news-scroll-container">
+                <div class="news-scroll">
+                    {% for news in news_items %}
+                        <div class="news-card">
+                            <div class="news-date-label">
+                                {{ news.published_date|uzbek_date_format }}
+                            </div>
+                            {% if news.image %}
+                                <img src="{{ news.image.url }}" alt="{{ news.title }}" class="news-image">
+                            {% else %}
+                                <img src="{% static 'images/default-news.jpg' %}" alt="Default News Image" class="news-image">
+                            {% endif %}
+                            <h3 class="news-title">
+                                <a href="{% url 'news_detail' news.slug %}">
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ news.title_ru }}
+                                    {% else %}
+                                        {{ news.title_uz }}
+                                    {% endif %}
+                                </a>
+                            </h3>
+                            <p class="news-description">{{ news.short_description }}</p>
+                            <div class="news-meta">
+                                <span class="news-date">
+                                    <i class="fas fa-calendar-alt"></i> {{ news.published_date|date:"d.m.Y" }}
+                                </span>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <p>{% trans "Hozircha yangiliklar yo'q." %}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="news-footer">
+                <a href="{% url 'news_list' %}" class="btn primary-btn">{% trans "Barcha yangiliklar" %}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">{% trans "Biz haqimizda" %}</h2>
+            <p class="about-desc">{% trans "Turkiston Akademiyasi ikkala mamlakat manfaatlarini ko'zlab, ta'lim va kasbiy taraqqiyot sohasida yangi imkoniyatlar yaratishga intiladi." %}</p>
+            <br>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="{% static 'images/academy-building.jpg' %}" alt="{% trans 'Turkiston Akademiyasi Logo' %}" style="max-width: 400px;">
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="icon-box blue"><i class="fas fa-building"></i></div>
+                        <div class="feature-content">
+                            <h3>{% trans "Tashkil etilishi" %}</h3>
+                            <p>{% trans "2023-yilda Toshkent shahrida ikki davlat hamkorligida innovatsion ta'lim markazi sifatida tashkil topgan" %}</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="icon-box blue"><i class="fas fa-certificate"></i></div>
+                        <div class="feature-content">
+                            <h3>{% trans "Sertifikat markazi" %}</h3>
+                            <p>{% trans "Ta'lim va kasbiy sohalarda xalqaro e'tirof etilgan sertifikatlarni berish bo'yicha litsenziyalangan muassasa" %}</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="icon-box blue"><i class="fas fa-handshake"></i></div>
+                        <div class="feature-content">
+                            <h3>{% trans "Hamkorlik" %}</h3>
+                            <p>{% trans "Turkiston Akademiyasi ikki mamlakatning yetakchi universitet va kompaniyalari bilan o'zaro aloqalar o'rnatgan markaz" %}</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="icon-box blue"><i class="fas fa-users"></i></div>
+                        <div class="feature-content">
+                            <h3>{% trans "Mutaxassislar jamoasi" %}</h3>
+                            <p>{% trans "Ta'lim, training, professor-o'qituvchilar va mutaxassislar ekspert bo'lar jamoasi" %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="section">
+        <div class="container">
+            <h2 class="section-title">{% trans "Missiyamiz va maqsadlarimiz" %}</h2>
+            <div class="mission-items">
+                <div class="mission-item">
+                    <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>{% trans "Oliy maqsad" %}</h3>
+                    <p>{% trans "Ta'lim sifatini oshirish, iqtisodiy hamkorlikni kuchaytirish" %}</p>
+                </div>
+                <div class="mission-item">
+                    <div class="icon-box"><i class="fas fa-users"></i></div>
+                    <h3>{% trans "Malaka oshirish" %}</h3>
+                    <p>{% trans "Mutaxassislar almashinuvini va kasbiy ko'nikmalarni rivojlantirish" %}</p>
+                </div>
+                <div class="mission-item">
+                    <div class="icon-box"><i class="fas fa-flask"></i></div>
+                    <h3>{% trans "Ilmiy hamkorlik" %}</h3>
+                    <p>{% trans "Loyihalarda birgalikda ishlash va innovatsion loyihalarni amalga oshirish" %}</p>
+                </div>
+                <div class="mission-item">
+                    <div class="icon-box"><i class="fas fa-globe"></i></div>
+                    <h3>{% trans "Xalqaro sertifikatlash" %}</h3>
+                    <p>{% trans "Xalqaro standartlarga mos sertifikatlarni berish va yo'ga qo'yish" %}</p>
+                </div>
+            </div>
+            <p class="section-desc">{% trans "Turkiston Akademiyasi ikkala mamlakat manfaatlarini ko'zlab, ta'lim va kasbiy taraqqiyot sohasida yangi imkoniyatlar yaratishga intiladi." %}</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">{% trans "Ta'lim yo'nalishlari" %}</h2>
+            <div class="education-items">
+                <div class="education-item">
+                    <h3>{% trans "Biznes boshqaruvi" %}</h3>
+                    <p>{% trans "Xalqaro savdo, moliya va marketing sohasida zamonaviy yondashuvlar va amaliy ko'nikmalar beruvchi dasturlar." %}</p>
+                </div>
+                <div class="education-item">
+                    <h3>{% trans "Axborot texnologiyalari" %}</h3>
+                    <p>{% trans "Dasturlash, ma'lumotlar tahlili va sun'iy intellekt bo'yicha chuqurlashtirilgan o'quv kurslari." %}</p>
+                </div>
+                <div class="education-item">
+                    <h3>{% trans "Til va madiynat" %}</h3>
+                    <p>{% trans "Turk va o'zbek tillari, madiynati, tarixi o'rganish hamda tarjimolik ko'nikmalarni rivojlantirish." %}</p>
+                </div>
+                <div class="education-item">
+                    <h3>{% trans "Pedagogika va ta'lim metodikasi" %}</h3>
+                    <p>{% trans "Zamonaviy ta'lim usullari, masofaviy ta'lim texnologiyalari va o'qitish mahoratini oshirish." %}</p>
+                </div>
+            </div>
+            <p class="section-desc">{% trans "Bizning hamkorlarimiz xalqaro moliyaviy qo'llab-quvvatlashni, balki o'quv dasturlarini ishlab chiqishda maslahat va ko'mak berib kelishmoqda." %}</p>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="section">
+        <div class="container">
+            <h2 class="section-title">{% trans "Hamkorlar" %}</h2>
+            <p class="section-desc">{% trans "Turkiston Akademiyasi ta'lim va ilmiy-tadqiqot sohasida yuqori natijalarga erishish uchun nufuzli tashkilotlar bilan strategik hamkorlik aloqalarini o'rnatgan." %}</p>
+            <div class="partner-items">
+                <div class="partner-item">
+                    <div class="icon-box"><i class="fas fa-university"></i></div>
+                    <h3>{% trans "Ta'lim muassasalari" %}</h3>
+                    <p>{% trans "Turkiya va O'zbekistonning yetakchi universitetlari, akademik institutlar bilan o'zaro hamkorlik shartnomalari o'rnatgan bo'lib, talabalarga o'quv dasturlarini amalga oshirish va ilmiy loyihalarda oshirishmoqda." %}</p>
+                </div>
+                <div class="partner-item">
+                    <div class="icon-box"><i class="fas fa-building"></i></div>
+                    <h3>{% trans "Davlat tashkilotlari" %}</h3>
+                    <p>{% trans "Ikkala mamlakat vazirliklari va idoralari bilan hamkorlikda mutaxassislarini tayyorlash, malaka oshirish va sertifikatlash dasturlarni ishlab chiqish loyihalarni amalga oshirilmoqda." %}</p>
+                </div>
+                <div class="partner-item">
+                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                    <h3>{% trans "Xususiy sektor" %}</h3>
+                    <p>{% trans "Xalqaro va mahalliy kompaniyalar bilan hamkorlikda amaliy ko'nikmalarni rivojlantirish, stajirovka dasturlarini tashkil etish va bitiruvchilarini ish bilan ta'minlash mexanizmlari yaratilgan." %}</p>
+                </div>
+            </div>
+            <p class="section-desc">{% trans "Bizning hamkorlarimiz xalqaro moliyaviy qo'llab-quvvatlashni, balki o'quv dasturlarini ishlab chiqishda maslahat va ko'mak berib kelishmoqda." %}</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">{% trans "Kontakt ma'lumotlari" %}</h2>
+            <p class="section-desc">{% trans "Turkiston Akademiyasi bilan bog'lanish uchun quyidagi aloqa vositalaridan foydalanishingiz mumkin:" %}</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>{% trans "Manzil" %}</h3>
+                    <p>{% trans "Toshkent shahri, Yakkasaray Tumani, Kichik Beshyog'och ko'chasi, NO-87" %}</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box"><i class="fas fa-phone"></i></div>
+                    <h3>{% trans "Telefon raqamlari" %}</h3>
+                    <p>{% trans "+998 91 775 63 33 (asosiy)" %}</p>
+                    <p>{% trans "+998 98 800 05 99 (mobil)" %}</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                    <h3>{% trans "Elektron pochta" %}</h3>
+                    <p>{% trans "info@turkistonacademy.uz" %}</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-box"><i class="fas fa-clock"></i></div>
+                    <h3>{% trans "Ish vaqti" %}</h3>
+                    <p>{% trans "Dushanba - Juma: 9:00 - 18:00" %}</p>
+                    <p>{% trans "Shanba: 10:00 - 14:00" %}</p>
+                    <p>{% trans "Yakshanba: Dam olish kuni" %}</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-telegram"></i> @TurkistonAcademy</a>
+                <a href="#"><i class="fab fa-instagram"></i> @turkiston.academy</a>
+                <a href="#"><i class="fab fa-facebook"></i> Turkiston Akademiyasi</a>
+            </div>
+            <p class="section-desc">{% trans "Savollar bo'lsa, bizga murojaat qilishdan tortinmang. Mutaxassislarimiz sizga yordam berishdan xursand bo'ladi." %}</p>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% load static i18n %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% trans "Turkiston Akademiyasi" %}{% endblock %}</title>
+    <!-- Фавикон -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/turkiya.ico' %}">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Вторая версия Font Awesome (можно оставить только одну, если не используете иконки из 6.0.0) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Ваш CSS -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expanded">
+            <div class="container">
+                <div class="logo">{% trans "Turkiston Akademiyasi" %}</div>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">{% trans "Bosh sahifa" %}</a></li>
+                    <li><a href="#yangiliklar">{% trans "Yangiliklar" %}</a></li>
+                    <li><a href="#about">{% trans "Biz haqimizda" %}</a></li>
+                    <li><a href="#mission">{% trans "Missiyamiz" %}</a></li>
+                    <li><a href="#education">{% trans "Ta'lim yo'nalishlari" %}</a></li>
+                    <li><a href="#partners">{% trans "Hamkorlar" %}</a></li>
+                    <li><a href="#contact">{% trans "Kontakt" %}</a></li>
+                    <!-- Перемещаем переключатель языков внутрь nav-links -->
+                    <li class="language-switcher">
+                        <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <select name="language" onchange="this.form.submit()">
+                                <option value="uz" {% if LANGUAGE_CODE == 'uz' %}selected{% endif %}>O'zbek</option>
+                                <option value="ru" {% if LANGUAGE_CODE == 'ru' %}selected{% endif %}>Русский</option>
+                            </select>
+                        </form>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>{% trans "Turkiston Akademiyasi" %}</h2>
+                    <p>{% trans "Turkiya va O'zbekiston hamkorligi" %}</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>{% trans "Sahifalar" %}</h3>
+                        <ul>
+                            <li><a href="{% url 'home' %}">{% trans "Bosh sahifa" %}</a></li>
+                            <li><a href="#about">{% trans "Biz haqimizda" %}</a></li>
+                            <li><a href="#education">{% trans "Ta'lim yo'nalishlari" %}</a></li>
+                            <li><a href="#partners">{% trans "Hamkorlar" %}</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>{% trans "Aloqa" %}</h3>
+                        <ul>
+                            <li><a href="#contact">{% trans "Kontaktlar" %}</a></li>
+                            <li><a href="#">{% trans "Ro'yxatdan o'tish" %}</a></li>
+                            <li><a href="#">{% trans "Ko'p so'raladigan savollar" %}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 {% trans "Turkiston akademiyasi. Barcha huquqlar himoyalangan." %}</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

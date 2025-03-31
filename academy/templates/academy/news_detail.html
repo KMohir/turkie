@@ -1,0 +1,46 @@
+{% extends 'academy/base.html' %}
+{% load static i18n news_filters %}
+
+{% block title %}
+    {% if LANGUAGE_CODE == 'ru' %}
+        {{ news.title_ru }} - {% trans "Turkiston Akademiyasi" %}
+    {% else %}
+        {{ news.title_uz }} - {% trans "Turkiston Akademiyasi" %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <section id="news-detail" class="section">
+        <div class="container">
+            <h1 class="news-title">
+                {% if LANGUAGE_CODE == 'ru' %}
+                    {{ news.title_ru }}
+                {% else %}
+                    {{ news.title_uz }}
+                {% endif %}
+            </h1>
+            <div class="news-meta">
+                <span class="news-date">
+                    <i class="fas fa-calendar-alt"></i> {{ news.published_date|date:"d.m.Y" }}
+                </span>
+                <span class="news-views">
+                    <i class="fas fa-eye"></i> {{ news.views_count }} {% trans "ko'rishlar" %}
+                </span>
+            </div>
+            {% if news.image %}
+                <img src="{{ news.image.url }}" alt="{% if LANGUAGE_CODE == 'ru' %}{{ news.title_ru }}{% else %}{{ news.title_uz }}{% endif %}" class="news-detail-image">
+            {% endif %}
+            <div class="news-content">
+                {% if LANGUAGE_CODE == 'ru' %}
+                    {{ news.content_ru|safe }}
+                {% else %}
+                    {{ news.content_uz|safe }}
+                {% endif %}
+            </div>
+            {% if news.address %}
+                <p><strong>{% trans "Manzil" %}:</strong> {{ news.address }}</p>
+            {% endif %}
+            <a href="{% url 'news_list' %}" class="btn primary-btn">{% trans "Orqaga" %}</a>
+        </div>
+    </section>
+{% endblock %}

@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 msgid "Turkiston Akademiyasi"
-msgstr "Туркистонская Академия"
+msgstr "Туркистанская академия"
 
 msgid "Turkiya va O'zbekiston hamkorligi"
 msgstr "Сотрудничество Турции и Узбекистана"
@@ -41,13 +41,13 @@ msgid "Kontakt"
 msgstr "Контакты"
 
 msgid "2025-yilda Toshkent shahrida tashkil etilgan 'Turkiston Akademiyasi' - Turkiya va O'zbekiston o'rtasida ta'lim va sertifikatlash sohasidagi hamkorlikni yangi bosqichga ko'taruvchi nufuzli bilim markazi."
-msgstr "Основанная в 2025 году в Ташкенте 'Туркистонская Академия' - это престижный образовательный центр, поднимающий сотрудничество между Турцией и Узбекистаном в сфере образования и сертификации на новый уровень."
+msgstr "Основанная в 2025 году в Ташкенте 'Туркистанская академия' - это престижный образовательный центр, поднимающий сотрудничество между Турцией и Узбекистаном в сфере образования и сертификации на новый уровень."
 
 msgid "Dasturlar haqida"
 msgstr "О программах"
 
 msgid "Turkiston Akademiyasi'ning so'nggi yangiliklari va e'lonlarini ushbu sahifada kuzatib boring. Akademiyamiz muntazam ravishda o'quv dasturlari, tadbirlar va ilmiy loyihalar haqida ma'lumotlar yangilab boradi."
-msgstr "Следите за последними новостями и объявлениями Туркистонской Академии на этой странице. Наша академия регулярно обновляет информацию о учебных программах, мероприятиях и научных проектах."
+msgstr "Следите за последними новостями и объявлениями Туркистанской Академии на этой странице. Наша академия регулярно обновляет информацию о учебных программах, мероприятиях и научных проектах."
 
 msgid "So'nggi e'lonlar"
 msgstr "Последние объявления"
@@ -83,7 +83,7 @@ msgid "Hamkorlik"
 msgstr "Сотрудничество"
 
 msgid "Turkiston Akademiyasi ikki mamlakatning yetakchi universitet va kompaniyalari bilan o'zaro aloqalar o'rnatgan markaz"
-msgstr "Туркистонская Академия - центр, установивший взаимосвязи с ведущими университетами и компаниями двух стран"
+msgstr "Туркистанская академия - центр, установивший взаимосвязи с ведущими университетами и компаниями двух стран"
 
 msgid "Mutaxassislar jamoasi"
 msgstr "Команда специалистов"
@@ -92,7 +92,7 @@ msgid "Turkiya va O'zbekistonning tajribali professor-o'qituvchilari va amaliyot
 msgstr "Команда экспертов, состоящая из опытных профессоров-преподавателей и практиков из Турции и Узбекистана"
 
 msgid "Turkiston Akademiyasi ikkala mamlakat manfaatlarini ko'zlab, ta'lim va kasbiy taraqqiyot sohasida yangi imkoniyatlar yaratishga intiladi."
-msgstr "Туркистонская Академия стремится создавать новые возможности в сфере образования и профессионального развития, учитывая интересы обеих стран."
+msgstr "Туркистанская академия стремится создавать новые возможности в сфере образования и профессионального развития, учитывая интересы обеих стран."
 
 msgid "Missiyamiz va maqsadlarimiz"
 msgstr "Наша миссия и цели"
@@ -149,7 +149,7 @@ msgid "Bizning hamkorlarimiz xalqaro moliyaviy qo'llab-quvvatlashni, balki o'quv
 msgstr "Наши партнеры оказывают международную финансовую поддержку, а также консультируют и помогают в разработке учебных программ."
 
 msgid "Turkiston Akademiyasi ta'lim va ilmiy-tadqiqot sohasida yuqori natijalarga erishish uchun nufuzli tashkilotlar bilan strategik hamkorlik aloqalarini o'rnatgan."
-msgstr "Туркистонская Академия установила стратегическое сотрудничество с престижными организациями для достижения высоких результатов в сфере образования и научных исследований."
+msgstr "Туркистанская академия установила стратегическое сотрудничество с престижными организациями для достижения высоких результатов в сфере образования и научных исследований."
 
 msgid "Ta'lim muassasalari"
 msgstr "Образовательные учреждения"
@@ -173,7 +173,7 @@ msgid "Kontakt ma'lumotlari"
 msgstr "Контактная информация"
 
 msgid "Turkiston Akademiyasi bilan bog'lanish uchun quyidagi aloqa vositalaridan foydalanishingiz mumkin:"
-msgstr "Для связи с Туркистонской Академией вы можете использовать следующие контактные данные:"
+msgstr "Для связи с Туркистанской Академией вы можете использовать следующие контактные данные:"
 
 msgid "Manzil"
 msgstr "Адрес"
@@ -233,4 +233,15 @@ msgid "Ko'p so'raladigan savollar"
 msgstr "Часто задаваемые вопросы"
 
 msgid "Turkiston akademiyasi. Barcha huquqlar himoyalangan."
-msgstr "Туркистонская академия. Все права защищены."
+msgstr "Туркистанская академия. Все права защищены."
+
+msgid "Sertifikat markazi"
+msgstr "Центр сертификации"
+
+
+msgid "Barcha yangiliklar"
+msgstr "Все новости"
+
+
+
+

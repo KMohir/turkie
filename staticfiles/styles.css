@@ -232,6 +232,125 @@ img {
 }
 
 /* News Section */
+.news-scroll-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Скрыть скроллбар в Firefox */
+}
+
+.news-scroll-container::-webkit-scrollbar {
+    display: none; /* Скрыть скроллбар в WebKit-браузерах */
+}
+
+.news-scroll-container::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Цвет фона скроллбара */
+    border-radius: 4px;
+}
+
+.news-scroll-container::-webkit-scrollbar-thumb {
+    background: #7DD1C9; /* Цвет ползунка */
+    border-radius: 4px;
+}
+
+.news-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #5ab8b0; /* Цвет ползунка при наведении */
+}
+
+.news-scroll {
+    display: flex; /* Располагаем карточки в одну строку */
+    flex-wrap: nowrap; /* Запрещаем перенос на новую строку */
+    gap: 20px; /* Расстояние между карточками */
+    padding-bottom: 10px; /* Отступ снизу для скроллбара */
+}
+
+.news-card {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    flex: 0 0 250px; /* Фиксированная ширина карточки */
+    min-width: 250px; /* Минимальная ширина карточки */
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-date-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.news-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    margin: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.news-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.news-title a:hover {
+    color: #007bff;
+}
+
+.news-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 10px 10px;
+    line-height: 1.4;
+}
+
+.newsa.news-meta {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    color: #999;
+    margin: 0 10px 10px;
+}
+
+.news-date i {
+    margin-right: 5px;
+    color: #7DD1C9; /* Цвет иконки календаря */
+}
+
+.news-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.news-detail-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+.news-content {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+/* News Categories (оставляем, если используете) */
 .news-categories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -264,12 +383,53 @@ img {
 /* About Section */
 .about-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Выравниваем элементы по верхнему краю */
     gap: 50px;
 }
 
 .about-image {
     flex: 1;
+    text-align: center; /* Центрируем логотип */
+}
+
+.about-image img {
+    max-width: 400px; /* Ограничиваем размер логотипа */
+    margin-bottom: 20px; /* Отступ снизу для текста */
+}
+
+.about-desc {
+    color: var(--text-light);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.about-features {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    gap: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature-content {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.feature p {
+    color: var(--text-light);
+    font-size: 0.9rem;
 }
 
 .about-features {
@@ -277,23 +437,6 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-}
-
-.feature {
-    display: flex;
-    align-items: center; /* Центрируем иконку и текст */
-    margin-bottom: 30px;
-    min-height: 100px; /* Даем достаточно места */
-}
-
-.feature-content {
-    margin-left: 20px;
-    flex: 1; /* Текст занимает оставшееся пространство */
-}
-
-.feature h3 {
-    margin-bottom: 10px;
-    color: var(--primary-color);
 }
 
 /* Mission Section */
@@ -475,76 +618,180 @@ footer {
 .footer-bottom {
     text-align: center;
 }
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
 
-.news-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-}
-
-.news-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.news-title {
-    font-size: 1.2rem;
-    margin: 10px;
-}
-
-.news-title a {
-    color: #333;
-    text-decoration: none;
-}
-
-.news-title a:hover {
-    color: #007bff;
-}
-
-.news-description {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0 10px 10px;
-}
-
-.news-meta {
+/* Shift the icon-box to the right in the Contact Section */
+#contact .contact-item {
     display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-    color: #999;
-    margin: 0 10px 10px;
+    flex-direction: column;
+    align-items: center; /* Keep the overall content centered */
 }
 
-.news-date i {
-    margin-right: 5px;
+#contact .contact-item .icon-box {
+    margin-left: auto; /* Push the icon-box to the right */
+    margin-right: 0; /* Ensure no right margin to align fully to the right */
 }
 
-.news-footer {
-    text-align: center;
-    margin-top: 20px;
+/* Shift the icon-box to the right with a specific offset */
+#contact .contact-item .icon-box {
+    margin-left: 4px; /* Adjust this value to control how far right the icon moves */
 }
 
-.news-detail-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    margin: 20px 0;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 0 40px;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    /* News Section */
+    .news-card {
+        flex: 0 0 200px;
+        min-width: 200px;
+    }
+
+    /* General Adjustments */
+    .section {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .icon-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-box i {
+        font-size: 30px;
+    }
+
+    /* Grid Layouts */
+    .news-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .education-items {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.news-content {
-    margin: 20px 0;
-    line-height: 1.6;
+@media (max-width: 480px) {
+    /* Buttons */
+    .btn {
+        padding: 8px 15px;
+    }
+
+    /* News Section */
+    .news-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    /* Grid Layouts */
+    .news-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-items {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-items {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

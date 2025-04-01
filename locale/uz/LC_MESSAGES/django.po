@@ -234,3 +234,12 @@ msgstr "Ko'p so'raladigan savollar"
 
 msgid "Turkiston akademiyasi. Barcha huquqlar himoyalangan."
 msgstr "Turkiston akademiyasi. Barcha huquqlar himoyalangan."
+
+msgid "Sertifikat markazi"
+msgstr "Sertifikat markazi"
+
+msgid "Barcha yangiliklar"
+msgstr "Barcha yangiliklar"
+
+
+

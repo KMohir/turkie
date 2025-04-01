@@ -76,19 +76,28 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "turkiston_academy.wsgi.application"
-
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
 # Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'turk_akademiya',
-        'USER': 'postgres',
-        'PASSWORD': '111',
-        'HOST': 'localhost',  # если сервер PostgreSQL находится на той же машине, где и Django
-        'PORT': '5432',  # стандартный порт PostgreSQL
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'turk_akademiya',
+#         'USER': 'postgres',
+#         'PASSWORD': '111',
+#         'HOST': 'localhost',  # если сервер PostgreSQL находится на той же машине, где и Django
+#         'PORT': '5432',  # стандартный порт PostgreSQL
+#     }
+# }
 
 
 # Password validation

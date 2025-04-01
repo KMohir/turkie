@@ -24,7 +24,7 @@ SECRET_KEY = "django-insecure-=&mb#ljmx+6=dc5jd+i#s%t5p-&b+fxeu_5vomdnwnh9f!2-y&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["turkistonakademiyasi.uz"]
+ALLOWED_HOSTS = ["https://www.turkistonakademiyasi.uz/"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Добавьте эту строкуы
 CSRF_TRUSTED_ORIGINS = [
-    "https://turkistonakademiyasi.uz",
+    "https://www.turkistonakademiyasi.uz/",
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Fetch and Populate News
     try {
-        const response = await fetch('/path/to/your/news.json'); // Adjust the path
-        const newsItems = await response.json();
+
 
         if (scrollContainer) {
             scrollContainer.innerHTML = newsItems.map(item => `

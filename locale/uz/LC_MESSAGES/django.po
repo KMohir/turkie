@@ -193,8 +193,8 @@ msgstr "+998 98 800 05 99 (mobil)"
 msgid "Elektron pochta"
 msgstr "Elektron pochta"
 
-msgid "info@turkistonacademy.uz"
-msgstr "info@turkistonacademy.uz"
+msgid "Info@turkistonakademiyasi.uz"
+msgstr "Info@turkistonakademiyasi.uz"
 
 msgid "Ish vaqti"
 msgstr "Ish vaqti"

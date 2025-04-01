@@ -7,19 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% trans "Turkiston Akademiyasi" %}{% endblock %}</title>
     <!-- Фавикон -->
-    <link rel="icon" type="image/x-icon" href="{% static 'images/turkiya.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/turkiya.png' %}">
     <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Вторая версия Font Awesome (можно оставить только одну, если не используете иконки из 6.0.0) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Ваш CSS -->
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- Стили для логотипа -->
+    <style>
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo-image {
+            width: 30px; /* Размер логотипа */
+            height: 30px;
+            margin-right: 10px; /* Отступ между логотипом и текстом */
+            border-radius: 50%; /* Делаем логотип круглым */
+            object-fit: cover; /* Убедимся, что изображение корректно обрезается */
+        }
+        .footer-logo h2 {
+            display: flex;
+            align-items: center;
+        }
+        .footer-logo .logo-image {
+            width: 30px; /* Размер логотипа в футере */
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 50%; /* Делаем логотип круглым */
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expanded">
             <div class="container">
-                <div class="logo">{% trans "Turkiston Akademiyasi" %}</div>
+                <div class="logo">
+                    <!-- Логотип уже добавлен здесь -->
+                    <img src="{% static 'images/turkiya.png' %}" alt="Turkiston Akademiyasi Logo" class="logo-image">
+                    {% trans "Turkiston Akademiyasi" %}
+                </div>
                 <ul class="nav-links">
                     <li><a href="{% url 'home' %}">{% trans "Bosh sahifa" %}</a></li>
                     <li><a href="#yangiliklar">{% trans "Yangiliklar" %}</a></li>
@@ -56,7 +85,11 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h2>{% trans "Turkiston Akademiyasi" %}</h2>
+                    <!-- Логотип в футере -->
+                    <h2>
+                        <img src="{% static 'images/turkiya.png' %}" alt="Turkiston Akademiyasi Logo" class="logo-image">
+                        {% trans "Turkiston Akademiyasi" %}
+                    </h2>
                     <p>{% trans "Turkiya va O'zbekiston hamkorligi" %}</p>
                 </div>
                 <div class="footer-links">
